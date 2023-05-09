@@ -128,12 +128,12 @@ pub fn main() void {
         // wanted for this Food.
         //
         // Please return this Food from the loop.
-        break;
-    };
+        break food;
+    } else null;
     // ^ Oops! We forgot to return Mac & Cheese as the default
     // Food when the requested ingredients aren't found.
 
-    print("Enjoy your {s}!\n", .{meal.name});
+    print("Enjoy your {s}!\n", .{meal.?.name});
 }
 
 // Challenge: You can also do away with the 'found' variable in
